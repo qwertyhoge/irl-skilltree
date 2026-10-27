@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "sample-math",
+  "title": "数学から機械学習へ（サンプル）",
+  "description": "探索体験を確かめるための例。学問的に厳密なカリキュラムではない。",
+  "authors": ["IRLSkilltree サンプル"],
+  "nodes": [
+    { "id": "math", "kind": "group", "parentId": null, "title": "数学", "summary": "量・構造・変化を言葉と記号で扱う技術。", "unlocks": "物理、工学、経済、機械学習など、数式で書かれた世界の扉がほぼすべて開く。" },
+    { "id": "ml", "kind": "group", "parentId": null, "title": "機械学習", "summary": "データから規則を学ばせる手法の集まり。", "unlocks": "画像認識や需要予測のように、人が規則を書ききれない問題をデータで解ける。" },
+    { "id": "prog", "kind": "group", "parentId": null, "title": "プログラミング", "summary": "考えた手順をコンピュータに実行させる技術。", "unlocks": "数式を実際に計算させ、大量のデータで確かめられる。" },
+
+    { "id": "elem", "kind": "group", "parentId": "math", "title": "初等数学", "summary": "式・関数・数列など、すべての土台になる道具。", "unlocks": "文章題を式に直し、変化をグラフで捉えられる。" },
+    { "id": "analysis", "kind": "group", "parentId": "math", "title": "解析学", "summary": "極限を使って、連続的な変化を厳密に扱う分野。", "unlocks": "速さ・面積・最適な値を、近似ではなく理屈で求められる。" },
+    { "id": "linalg", "kind": "group", "parentId": "math", "title": "線形代数", "summary": "ベクトルと行列で、多次元の量をまとめて扱う分野。", "unlocks": "画像・音声・表データを「点の集まり」として操作できる。" },
+    { "id": "prob", "kind": "group", "parentId": "math", "title": "確率・統計", "summary": "不確かさを数で表し、データから結論を引き出す。", "unlocks": "「たまたま」と「傾向」を区別し、根拠のある判断ができる。" },
+    { "id": "geometry", "kind": "group", "parentId": "math", "title": "幾何学", "summary": "図形と空間の性質を調べる分野。中身はまだ書かれていない。" },
+
+    { "id": "equations", "kind": "skill", "parentId": "elem", "title": "方程式と式変形", "summary": "未知数を含む関係を、同値を保って変形する。", "unlocks": "条件から未知の量を逆算できる。" },
+    { "id": "functions", "kind": "skill", "parentId": "elem", "title": "関数とグラフ", "summary": "入力に対して出力が一つ決まる関係と、その形。", "unlocks": "変化の様子を一目で読み取り、別の量との関係を説明できる。" },
+    { "id": "trig", "kind": "skill", "parentId": "elem", "title": "三角関数", "summary": "角度と比、そして周期的な変化を表す関数。", "unlocks": "波・回転・振動を式で書ける。" },
+    { "id": "explog", "kind": "skill", "parentId": "elem", "title": "指数と対数", "summary": "掛け算の繰り返しと、その逆。", "unlocks": "複利、人口増加、音の大きさのような桁の変わる量を扱える。" },
+    { "id": "sequences", "kind": "skill", "parentId": "elem", "title": "数列と和", "summary": "規則的に並ぶ数と、その合計。", "unlocks": "無限に続く過程の行き先を考える準備ができる。" },
+
+    { "id": "limits", "kind": "skill", "parentId": "analysis", "title": "極限", "summary": "限りなく近づくことを厳密に定義する。", "unlocks": "微分と積分の意味を、直感ではなく定義から説明できる。" },
+    { "id": "derivative", "kind": "skill", "parentId": "analysis", "title": "微分", "summary": "瞬間の変化率を求める。", "unlocks": "最大・最小を探し、変化の速さを予測できる。" },
+    { "id": "integral", "kind": "skill", "parentId": "analysis", "title": "積分", "summary": "細かく分けて足し合わせ、全体量を求める。", "unlocks": "曲がった図形の面積や、変化の累積を計算できる。" },
+    { "id": "ode", "kind": "skill", "parentId": "analysis", "title": "微分方程式", "summary": "変化の規則から、量そのものの振る舞いを求める。", "unlocks": "落下、感染症の広がり、回路の電流を予測するモデルを作れる。" },
+    { "id": "multivar", "kind": "group", "parentId": "analysis", "title": "多変数解析", "summary": "入力が複数ある関数の微分・積分。", "unlocks": "たくさんのつまみを持つ仕組みを、一度に最適化できる。" },
+
+    { "id": "partial", "kind": "skill", "parentId": "multivar", "title": "偏微分と連鎖律", "summary": "一つの変数だけを動かしたときの変化率と、その合成。", "unlocks": "複雑に組み合わさった計算の、どこを動かすと結果がどう変わるか分かる。" },
+    { "id": "gradient", "kind": "skill", "parentId": "multivar", "title": "勾配", "summary": "最も急に増える方向を表すベクトル。", "unlocks": "坂を下るように、誤差を小さくする方向を計算できる。" },
+    { "id": "multint", "kind": "skill", "parentId": "multivar", "title": "重積分", "summary": "平面や空間にわたって積分する。", "unlocks": "体積や、多次元の確率を計算できる。" },
+
+    { "id": "vectors", "kind": "skill", "parentId": "linalg", "title": "ベクトル", "summary": "大きさと向き、あるいは数の組。", "unlocks": "複数の特徴をまとめて一つの点として扱える。" },
+    { "id": "matrices", "kind": "skill", "parentId": "linalg", "title": "行列", "summary": "数を縦横に並べ、まとめて計算する。", "unlocks": "連立方程式を一度に解き、大量のデータを一括で変換できる。" },
+    { "id": "lintrans", "kind": "skill", "parentId": "linalg", "title": "線形変換", "summary": "行列を「空間をゆがめる操作」として見る。", "unlocks": "回転・拡大・射影を組み合わせて設計できる。" },
+    { "id": "eigen", "kind": "skill", "parentId": "linalg", "title": "固有値と固有ベクトル", "summary": "変換しても向きが変わらない特別な方向。", "unlocks": "振動の固有モードや、繰り返しの行き着く先が分かる。" },
+    { "id": "svd", "kind": "skill", "parentId": "linalg", "title": "特異値分解", "summary": "どんな行列も回転・伸縮・回転に分解する。", "unlocks": "データの本質的な成分だけを残して圧縮できる。" },
+
+    { "id": "probability", "kind": "skill", "parentId": "prob", "title": "確率", "summary": "起こりやすさを0から1の数で表す。", "unlocks": "賭けやリスクを、勘ではなく計算で比べられる。" },
+    { "id": "distributions", "kind": "skill", "parentId": "prob", "title": "確率分布", "summary": "値のばらつき方の型。正規分布など。", "unlocks": "測定誤差や偶然の揺れを、モデルとして書ける。" },
+    { "id": "estimation", "kind": "skill", "parentId": "prob", "title": "統計的推定", "summary": "標本から全体の性質を見積もる。", "unlocks": "少ないデータから、どれくらい確かなことが言えるかを示せる。" },
+
+    { "id": "linreg", "kind": "skill", "parentId": "ml", "title": "線形回帰", "summary": "データに最もよく合う直線（超平面）を求める。", "unlocks": "数値の予測モデルを作り、その根拠を説明できる。" },
+    { "id": "gd", "kind": "skill", "parentId": "ml", "title": "勾配降下法", "summary": "勾配の逆向きに少しずつ進み、誤差を減らす。", "unlocks": "式で解けない大きなモデルも、計算で学習させられる。" },
+    { "id": "nn", "kind": "skill", "parentId": "ml", "title": "ニューラルネットワーク", "summary": "単純な計算の層を重ねた、柔軟な関数。", "unlocks": "画像や言葉のような複雑なデータから特徴を学べる。" },
+    { "id": "backprop", "kind": "skill", "parentId": "ml", "title": "誤差逆伝播法", "summary": "連鎖律で、全パラメータの勾配を効率よく求める。", "unlocks": "何百万ものパラメータを持つネットワークを訓練できる。" },
+    { "id": "pca", "kind": "skill", "parentId": "ml", "title": "主成分分析", "summary": "データのばらつきが大きい方向を見つける。", "unlocks": "高次元のデータを二次元に描いて、構造を眺められる。" },
+    { "id": "overfit", "kind": "skill", "parentId": "ml", "title": "汎化と過学習", "summary": "手元のデータに合わせすぎない工夫。", "unlocks": "未知のデータでも当たるモデルかどうかを見分けられる。" },
+
+    { "id": "python", "kind": "skill", "parentId": "prog", "title": "Python の基礎", "summary": "変数、条件分岐、繰り返し、関数。", "unlocks": "手作業の計算を、短いプログラムに任せられる。" },
+    { "id": "numpy", "kind": "skill", "parentId": "prog", "title": "NumPy で配列計算", "summary": "ベクトル・行列をまとめて高速に計算する。", "unlocks": "数式をほぼそのままコードに書き写して実験できる。" }
+  ],
+  "relations": [
+    { "id": "r-elem-analysis", "type": "prerequisite", "from": "elem", "to": "analysis" },
+    { "id": "r-elem-linalg", "type": "prerequisite", "from": "elem", "to": "linalg" },
+    { "id": "r-analysis-prob", "type": "related", "from": "analysis", "to": "prob", "note": "連続な確率分布は積分で扱う" },
+
+    { "id": "r-eq-func", "type": "prerequisite", "from": "equations", "to": "functions" },
+    { "id": "r-func-trig", "type": "prerequisite", "from": "functions", "to": "trig" },
+    { "id": "r-func-explog", "type": "prerequisite", "from": "functions", "to": "explog" },
+    { "id": "r-eq-seq", "type": "prerequisite", "from": "equations", "to": "sequences" },
+
+    { "id": "r-seq-limit", "type": "prerequisite", "from": "sequences", "to": "limits", "note": "数列の極限から関数の極限へ" },
+    { "id": "r-func-limit", "type": "prerequisite", "from": "functions", "to": "limits" },
+    { "id": "r-limit-diff", "type": "prerequisite", "from": "limits", "to": "derivative" },
+    { "id": "r-diff-int", "type": "prerequisite", "from": "derivative", "to": "integral" },
+    { "id": "r-diff-ode", "type": "prerequisite", "from": "derivative", "to": "ode" },
+    { "id": "r-int-ode", "type": "prerequisite", "from": "integral", "to": "ode" },
+    { "id": "r-diff-partial", "type": "prerequisite", "from": "derivative", "to": "partial" },
+    { "id": "r-int-multint", "type": "prerequisite", "from": "integral", "to": "multint" },
+    { "id": "r-partial-grad", "type": "prerequisite", "from": "partial", "to": "gradient" },
+    { "id": "r-explog-ode", "type": "related", "from": "explog", "to": "ode", "note": "指数関数は微分方程式の最も基本的な解" },
+    { "id": "r-trig-ode", "type": "related", "from": "trig", "to": "ode", "note": "振動の解は三角関数で書ける" },
+
+    { "id": "r-vec-mat", "type": "prerequisite", "from": "vectors", "to": "matrices" },
+    { "id": "r-mat-lt", "type": "prerequisite", "from": "matrices", "to": "lintrans" },
+    { "id": "r-lt-eigen", "type": "prerequisite", "from": "lintrans", "to": "eigen" },
+    { "id": "r-eigen-svd", "type": "prerequisite", "from": "eigen", "to": "svd" },
+    { "id": "r-vec-grad", "type": "related", "from": "vectors", "to": "gradient", "note": "勾配はベクトル" },
+    { "id": "r-eigen-ode", "type": "related", "from": "eigen", "to": "ode", "note": "連立微分方程式は固有値で解ける" },
+
+    { "id": "r-p-dist", "type": "prerequisite", "from": "probability", "to": "distributions" },
+    { "id": "r-dist-est", "type": "prerequisite", "from": "distributions", "to": "estimation" },
+    { "id": "r-int-dist", "type": "related", "from": "integral", "to": "distributions" },
+    { "id": "r-multint-dist", "type": "related", "from": "multint", "to": "distributions", "note": "多次元の確率は重積分" },
+
+    { "id": "r-mat-linreg", "type": "prerequisite", "from": "matrices", "to": "linreg" },
+    { "id": "r-grad-gd", "type": "prerequisite", "from": "gradient", "to": "gd", "note": "勾配降下法の「勾配」そのもの" },
+    { "id": "r-linreg-gd", "type": "related", "from": "linreg", "to": "gd" },
+    { "id": "r-gd-nn", "type": "prerequisite", "from": "gd", "to": "nn" },
+    { "id": "r-nn-bp", "type": "prerequisite", "from": "nn", "to": "backprop" },
+    { "id": "r-partial-bp", "type": "prerequisite", "from": "partial", "to": "backprop", "note": "逆伝播は連鎖律の繰り返し" },
+    { "id": "r-svd-pca", "type": "prerequisite", "from": "svd", "to": "pca" },
+    { "id": "r-eigen-pca", "type": "related", "from": "eigen", "to": "pca" },
+    { "id": "r-est-overfit", "type": "related", "from": "estimation", "to": "overfit" },
+    { "id": "r-linreg-overfit", "type": "related", "from": "linreg", "to": "overfit" },
+    { "id": "r-dist-linreg", "type": "related", "from": "distributions", "to": "linreg", "note": "誤差を正規分布と見ると最小二乗法が出てくる" },
+
+    { "id": "r-py-np", "type": "prerequisite", "from": "python", "to": "numpy" },
+    { "id": "r-mat-np", "type": "related", "from": "matrices", "to": "numpy" },
+    { "id": "r-np-nn", "type": "related", "from": "numpy", "to": "nn", "note": "小さなネットワークなら NumPy だけで書ける" }
+  ],
+  "achievements": [
+    { "id": "a-calc-100", "title": "微分積分の演習100問", "description": "教科書や問題集の演習を100問解く。", "skillIds": ["derivative", "integral"], "condition": { "kind": "text", "text": "微分・積分の演習問題を合計100問解いた" } },
+    { "id": "a-linalg-hours", "title": "線形代数に100時間", "skillIds": ["vectors", "matrices", "lintrans", "eigen", "svd"], "condition": { "kind": "text", "text": "線形代数の学習に累計100時間を使った" } },
+    { "id": "a-linreg-scratch", "title": "線形回帰をゼロから実装", "description": "ライブラリの回帰関数を使わずに実装し、結果を既存ライブラリと比べる。", "skillIds": ["linreg", "numpy", "matrices"], "condition": { "kind": "text", "text": "NumPy の行列演算だけで線形回帰を実装し、scikit-learn と同じ係数を得た" } },
+    { "id": "a-mnist", "title": "手書き数字を97%で認識", "skillIds": ["nn", "backprop", "gd"], "condition": { "kind": "text", "text": "自作のニューラルネットワークで MNIST のテスト精度97%以上" } }
+  ]
+}

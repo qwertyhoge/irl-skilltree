@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spike A: Cytoscape.js + ELK</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #0b1020;
+        color: #dfe6ff;
+        font-family: system-ui, "Hiragino Sans", sans-serif;
+      }
+      #cy {
+        position: absolute;
+        inset: 40px 0 0 0;
+      }
+      #bar {
+        height: 40px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        padding: 0 12px;
+        font-size: 13px;
+      }
+      #bar button {
+        background: #1d2a4d;
+        color: inherit;
+        border: 1px solid #3a4c80;
+        border-radius: 4px;
+        padding: 4px 10px;
+        cursor: pointer;
+      }
+      #log {
+        margin-left: auto;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bar">
+      <button id="compound">全体（compound + INCLUDE_CHILDREN）</button>
+      <button id="level">階層ごと（ダイブ）</button>
+      <button id="back">戻る</button>
+      <span id="crumb"></span>
+      <span id="log"></span>
+    </div>
+    <div id="cy"></div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
